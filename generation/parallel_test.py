@@ -17,7 +17,7 @@ pipeline = FluxPipeline.from_pretrained(
 # pipeline.to(accelerator.device)  # move the pipeline to the local device
 
 # Assume you have a list of prompts you want to process as a batch:
-prompts = ["a photo of a dog", "a photo of a cat", "a photo of a bird", "a photo of a fish"]
+prompts = ["photo of a dog", "photo of a cat", "photo of a bird", "photo of a fish"]
 
 # The accelerator provides a convenient split utility:
 with accelerator.split_between_processes(prompts) as prompt_subset:
